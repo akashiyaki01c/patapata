@@ -1,0 +1,138 @@
+
+div, span {
+    transform-origin: inherit;
+}
+
+/* パネル(一つのユニットの意)を定義 */
+#p-dest,
+#p-remarks {
+    height: 50px;
+    width: 325px;
+    margin: 10px;
+}
+
+.plex {
+    font-family: 'IBM Plex Sans', sans-serif;
+    transform-origin: inherit;
+}
+
+:root {
+    font-family: 'IBM Plex Sans JP', sans-serif;
+}
+
+.dest-default {
+    background-color: #222;
+    color: #efefef; 
+    font-size: 50px; 
+    font-weight: 700;
+    line-height: 50px;
+    transform-origin: left;
+}
+
+.p-type {
+    background-color: #222;
+    height: 50px;
+    width: 125px;
+    font-weight: 700;
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+}
+
+.p-type-ja {
+    font-size: 28px; line-height: 37px;
+    text-align: center;
+    width: 100%;
+    height: 36px;
+    box-sizing: border-box;
+}
+
+.p-type-en {
+    font-size: 12px; line-height: 12px;
+    text-align: center;
+    width: 100%;
+    height: 12px;
+    margin-bottom: 0.5px;
+}
+
+.p-type-en { color: white; }
+.p-type-local .p-type-ja { border: 1.5px solid white; background-color: #222; color: white; }
+.p-type-exp   .p-type-ja { border: 1.5px solid white; background-color: #fd0; color: #222; }
+.p-type-ltd   .p-type-ja { border: 1.5px solid white; background-color: #f40; color: white; }
+
+.p-type-4 {
+    /* position: absolute;
+    transform: scaleX(0.75) translateX(-50%);
+    transform-origin: left;
+    left: 50px; */
+}
+
+.p-dest {
+    background-color: #222;
+    height: 50px;
+    width: 200px;
+    color: white;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.p-dest-ja {
+    font-size: 28px; line-height: 32px;
+    text-align: center;
+    width: 100%;
+    height: 36px;
+    box-sizing: border-box;
+    padding-top: 2.5px;
+}
+
+.p-dest-en {
+    font-size: 12px; line-height: 12px;
+    text-align: center;
+    width: 100%;
+    height: 12px;
+    margin-bottom: 0.5px;
+}
+
+.p-special {
+    background-color: #333;
+    height: 50px;
+    width: 325px;
+    color: white;
+    font-weight: 700;
+    display: inline-block;
+    font-size: 28px; line-height: 32px;
+    text-align: center;
+}
+
+.p-remarks {
+    text-align: left;
+    height: 50%;
+    width: 100%;
+    font-size: 20px;
+    line-height: 25px;
+    display: flex;
+    transform-origin: left;
+}
+
+.p-stop {
+    margin: 5px;
+    height: 15px;
+    width: 50px;
+    min-width: 50px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 14px;
+    border: 1px solid white;
+    box-sizing: border-box;
+    transform-origin: inherit;
+}
+
+.p-white {
+    background-color: white;
+    color: #222;
+    height: 20px;
+    margin: 2.5px;
+    font-size: 20px;
+    line-height: 20px;
+    transform-origin: inherit;
+}

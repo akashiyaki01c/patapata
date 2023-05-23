@@ -1,0 +1,111 @@
+.panel-outer {
+    position: relative;
+    white-space: nowrap;
+    /* perspective: 500px; */
+    background-color: #222;
+}
+
+.panel-inner {
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+}
+
+.panel-upper {
+    transform-origin: bottom;
+}
+.panel-upper::before {
+    content: '';
+    height: 2%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: #000;
+    opacity: 0.8;
+}
+
+.panel-upper::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0; left: 0;
+    background: linear-gradient( 
+        #fff 0%, 
+        #999 50%,
+        #000 98%, 
+        #000 100%);
+    opacity: 0.1;
+}
+
+.panel-lower {
+    top: 50%;
+    transform-origin: top;
+}
+.panel-lower::before {
+    content: '';
+    height: 2%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-color: #000;
+    opacity: 0.8;
+}
+.panel-lower::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0; left: 0;
+    background: linear-gradient( 
+        #fff 0%, 
+        #999 50%,
+        #000 98%, 
+        #000 100%);
+    opacity: 0.1;
+}
+
+.panel-lower > div {
+    transform: translateY(-50%);
+}
+
+@keyframes rotate-0-upper {
+    0% { transform: rotateX(0deg); filter: brightness(100%); }
+    100% { transform: rotateX(-90deg); filter: brightness(25%); }
+}
+.rotate.panel-0-upper { animation: rotate-0-upper 0.1s linear both; }
+
+@keyframes rotate-1-lower {
+    0% { transform: rotateX(90deg); filter: brightness(300%); }
+    100% { transform: rotateX(0deg); filter: brightness(100%); }
+}
+.rotate.panel-1-lower { animation: rotate-1-lower 0.1s linear both 0.1s; }
+
+.none { display: none; }
+
+.panel-1-upper,
+.panel-0-lower {
+    z-index: 95;
+}
+.panel-1-upper::before,
+.panel-0-lower::before {
+    z-index: 96;
+}
+.panel-1-upper::after,
+.panel-0-lower::after {
+    z-index: 97;
+}
+
+.panel-0-upper,
+.panel-1-lower { 
+    z-index: 100;
+}
+.panel-0-upper::before,
+.panel-1-lower::before {
+    z-index: 101;
+}
+.panel-0-upper::after,
+.panel-1-lower::after {
+    z-index: 102;
+}
